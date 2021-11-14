@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VIEW-360</title>
+    <link rel="stylesheet" href="../src/css/pannellum-thoan1.css"/>
+    <script type="text/javascript" src="../src/js/libpannellum.js"></script>
+    <script type="text/javascript" src="../src/js/pannellum-thoan.js"></script>
+    <style>
+    #panorama {
+        
+		position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        overflow: auto;
+        background: lime; /* Just to visualize the extent */
+    }
+    </style>
+</head>
+<body>
+
+<div id="panorama"></div>
+<script>
+viewer = pannellum.viewer('panorama', ﻿{
+    "default": {
+        
+        "firstScene": "equirectangular",
+        "autoLoad": true
+    },
+    
+    "scenes": {
+        
+
+        "equirectangular": {
+            "title": "PHÒNG KHÁCH",
+            "panorama": "./newimg/canho-phongkhach2.jpg"
+        },
+
+        "multires": {
+            "title": "multires title",
+            "type": "multires",
+            "hfov": 85,
+            "multiRes": {
+                "basePath": "../examples/multires",
+                "path": "/%l/%s%x%y",
+                "fallbackPath": "/fallback/%s",
+                "extension": "png",
+                "tileResolution": 256,
+                "maxLevel": 4,
+                "cubeResolution": 2048
+            }
+        }
+    }
+});
+</script>
+
+</body>
+</html>

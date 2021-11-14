@@ -1,0 +1,17 @@
+﻿{
+    "default": {
+        "author": "Matthew Petroff",
+        "firstScene": "pond",
+        "sceneFadeDuration": 2000
+    },
+    
+    "scenes": {
+       
+
+        "pond": {
+            "title": "Jordan Pond",
+            "panorama": "./examplepano.jpg",
+            
+        }
+    }
+}
